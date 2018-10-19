@@ -46,3 +46,10 @@ Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/pr
 19. Implement error handling for undefined variables and out-of-bound array access.
 20. When complete - all of your tests should pass. 
 21. Write a README file detailing all steps required to successfully run the application. If you have added additional tests (for Udacious Test Coverage),  provide documentation for what these future features are and what the tests are checking for.
+
+## Credits
+
+- [Trigger a link's click action with Javascript](https://makandracards.com/makandra/17267-trigger-a-link-s-click-action-with-javascript)
+- [jquery-jasmine github](https://github.com/velesin/jasmine-jquery#html-fixtures)
+- <https://www.htmlgoodies.com/beyond/javascript/js-ref/testing-dom-events-using-jquery-and-jasmine-2.0.html>
+- <https://jasmine.github.io/tutorials/your_first_suite>
