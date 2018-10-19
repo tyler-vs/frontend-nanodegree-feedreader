@@ -31,12 +31,38 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
+        it('should have a URL property in each object (that represents an RSS feed) that is defined and not empty', function() {
+
+            // Use a for..of loop to loop through the array of feeds
+            // and test the url object property value
+            for (const feed of allFeeds) {
+
+                // Should be defined
+                expect(feed.url).toBeDefined();
+
+                // Should not be an empty string
+                expect(feed.url.toString()).not.toBe('');
+
+                // EXTRA: since empty strings are considered a "falsy" value
+                expect(feed.url).not.toBeFalsy();
+
+                // EXTRA: Regex for valid URLS
+                expect(feed.url).toMatch(/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/);
+            }
+        });
 
 
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+        it('should have a NAME property in each object (that represents an RSS feed) that is defined and not empty', function() {
+
+            for (const feed of allFeeds) {
+                expect(feed.name).toBeDefined();
+                expect(feed.name.toString()).not.toBe('');
+            }
+        });
     });
 
 
