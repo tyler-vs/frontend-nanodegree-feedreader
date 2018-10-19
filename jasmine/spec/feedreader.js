@@ -84,6 +84,23 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+        it('should change visibility when the menu icon is clicked', function() {
+
+            var menuBtn = document.querySelector('.menu-icon-link');
+
+            // Tigger click event on menu button/link
+            menuBtn.click();
+
+            // Check for active class on body element
+            expect(document.body.classList.contains('menu-hidden')).toBe(false);
+
+            // Tigger click event on menu button/link
+            menuBtn.click();
+
+            // Check for active class on body element
+            expect(document.body.classList.contains('menu-hidden')).toBe(true);
+
+        });
     });
 
     /* TODO: Write a new test suite named "Initial Entries" */
