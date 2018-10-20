@@ -146,14 +146,9 @@ $(function() {
         // Setup initialization for test spec
         beforeEach(function(done) {
 
-            // Grab the existing feed entries before removing them
-            // (i.e. Set initital state)
-            this.initialFeedEntries = document.querySelectorAll('.feed .entry');
-
-            // Reset the .feed container to have no child .entry elements
-            // so we can load a new feed entries without the old ones.
-            var feedEl = document.querySelector('.feed');
-            feedEl.innerHTML = '';
+            // Emptry feed conainer in case any entries exist
+            // $('.feed').empty();
+            document.querySelector('.feed').innerHTML = '';
 
             // Load new feed
             loadFeed(3, function() {
