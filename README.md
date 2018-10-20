@@ -52,4 +52,9 @@ Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/pr
 - [Trigger a link's click action with Javascript](https://makandracards.com/makandra/17267-trigger-a-link-s-click-action-with-javascript)
 - [jquery-jasmine github](https://github.com/velesin/jasmine-jquery#html-fixtures)
 - <https://www.htmlgoodies.com/beyond/javascript/js-ref/testing-dom-events-using-jquery-and-jasmine-2.0.html>
-- <https://jasmine.github.io/tutorials/your_first_suite>
+- [jasmine 2.0 intro docs](https://jasmine.github.io/2.0/introduction.html)
+- [devhints.io jasmine cheatsheet](https://devhints.io/jasmine)
+- Clemens Helm
+    + [Twitter](https://twitter.com/clemenshelm)
+    + [Codeship Tutorial: Using Jasmine for JavaScript Testing](https://blog.codeship.com/jasmine-testing-javascript/)
+
