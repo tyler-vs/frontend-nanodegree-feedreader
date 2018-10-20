@@ -1,62 +1,49 @@
-# Project Overview
+# Feed Reader Testing
 
-In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
+A Feed Reader for keeping on top of front end web development trends. And for learning about [JavaScript Testing](https://www.udacity.com/course/javascript-testing--ud549) with the [Jasmine JS Testing Framework](https://jasmine.github.io/2.0/introduction.html).
 
+Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/projects/3442558598/rubric).
 
-## Why this Project?
+## Installing
 
-Testing is an important part of the development process and many organizations practice a standard of development known as "test-driven development". This is when developers write tests first, before they ever start developing their application. All the tests initially fail and then they start writing application code to make these tests pass.
+Some steps get started:
 
-Whether you work in an organization that uses test-driven development or in an organization that uses tests to make sure future feature development doesn't break existing features, it's an important skill to have!
+- Clone or download the repo
+- Change directories into the repo from a CLI or unzip repo if downloaded and open folder 
+- Open `index.html` in a web browser
+- View the jasmine test results which usually display near the bottom of the page (should see a lot of green text)
 
+## Usage
 
-## What will I learn?
+Open `index.html` in a web browser to start viewing new entries, by default an initial feed should appear for the Udacity Blog. 
 
-You will learn how to use Jasmine to write a number of tests against a pre-existing application. These will test the underlying business logic of the application as well as the event handling and DOM manipulation.
+__View Full Feed entry__
 
+You can click the title of an entry to be redirected to that full entry's content on the feeds respective website/blog (i.e. a blog post or news article). 
 
-## How will this help my career?
+__View Feed entries from a different feed__
 
-* Writing effective tests requires analyzing multiple aspects of an application including the HTML, CSS and JavaScript - an extremely important skill when changing teams or joining a new company.
-* Good tests give you the ability to quickly analyze whether new code breaks an existing feature within your codebase, without having to manually test all of the functionality.
-
-
-# How will I complete this project?
-
-Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/projects/3442558598/rubric)
-
-1. Take the JavaScript Testing [course](https://www.udacity.com/course/ud549)
-2. Download the [required project assets](http://github.com/udacity/frontend-nanodegree-feedreader).
-3. Review the functionality of the application within your browser.
-4. Explore the application's HTML (**./index.html**), CSS (**./css/style.css**) and JavaScript (**./js/app.js**) to gain an understanding of how it works.
-5. Explore the Jasmine spec file in **./jasmine/spec/feedreader.js** and review the [Jasmine documentation](http://jasmine.github.io).
-6. Edit the `allFeeds` variable in **./js/app.js** to make the provided test fail and see how Jasmine visualizes this failure in your application.
-7. Return the `allFeeds` variable to a passing state.
-8. Write a test that loops through each feed in the `allFeeds` object and ensures it has a URL defined and that the URL is not empty.
-9. Write a test that loops through each feed in the `allFeeds` object and ensures it has a name defined and that the name is not empty.
-10. Write a new test suite named `"The menu"`.
-11. Write a test that ensures the menu element is hidden by default. You'll have to analyze the HTML and the CSS to determine how we're performing the hiding/showing of the menu element.
-12. Write a test that ensures the menu changes visibility when the menu icon is clicked. This test should have two expectations: does the menu display when clicked and does it hide when clicked again.
-13. Write a test suite named `"Initial Entries"`.
-14. Write a test that ensures when the `loadFeed` function is called and completes its work, there is at least a single `.entry` element within the `.feed` container.
-15. Write a test suite named `"New Feed Selection"`.
-16. Write a test that ensures when a new feed is loaded by the `loadFeed` function that the content actually changes.
-17. No test should be dependent on the results of another.
-18. Callbacks should be used to ensure that feeds are loaded before they are tested.
-19. Implement error handling for undefined variables and out-of-bound array access.
-20. When complete - all of your tests should pass. 
-21. Write a README file detailing all steps required to successfully run the application. If you have added additional tests (for Udacious Test Coverage),  provide documentation for what these future features are and what the tests are checking for.
+To view entries from a different feed, simply locate and click the menu icon (appears as three white horizonal lines) near to the top left of the page. Upon clicking the menu button, a sidebar should slide from the left of the page containing a list of different feeds that can choosen. Clicking any of these feeds should result in replacing the current entries with the most recent entries of the feed that was selected.
 
 ## Credits
 
 - [Trigger a link's click action with Javascript](https://makandracards.com/makandra/17267-trigger-a-link-s-click-action-with-javascript)
 - [jquery-jasmine github](https://github.com/velesin/jasmine-jquery#html-fixtures)
-- <https://www.htmlgoodies.com/beyond/javascript/js-ref/testing-dom-events-using-jquery-and-jasmine-2.0.html>
+- [Tutorial for jasmine testig basics](https://www.htmlgoodies.com/beyond/javascript/js-ref/testing-dom-events-using-jquery-and-jasmine-2.0.html)
 - [jasmine 2.0 intro docs](https://jasmine.github.io/2.0/introduction.html)
 - [devhints.io jasmine cheatsheet](https://devhints.io/jasmine)
-- Clemens Helm
-    + [Twitter](https://twitter.com/clemenshelm)
-    + [Codeship Tutorial: Using Jasmine for JavaScript Testing](https://blog.codeship.com/jasmine-testing-javascript/)
-- <https://howtodoinjava.com/scripting/javascript/jasmine-unit-testing-tutorial/>
-- [Potential alternative than using simply using nodeList and jasmine's isEqual() when checking that the feed entries changed after selecting a new feed](https://stackoverflow.com/questions/18600109/comparing-a-nodelist-to-an-array-of-element-ids)
-- https://medium.com/dailyjs
+- [Tutorial explaining jasmine basics](https://howtodoinjava.com/scripting/javascript/jasmine-unit-testing-tutorial/)
+- [StackOverflow Answer: Comparing NodeList](https://stackoverflow.com/questions/18600109/comparing-a-nodelist-to-an-array-of-element-ids)
+- [Udacity](https://www.udacity.com/)
+    + http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html
+- [jQuery](https://jquery.com/)
+- [Google Feed API Docs](https://developers.google.com/feed/v1/devguide)
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Node/isSameNode)
+- [`toBe` vs `toEqual` StackOverflow answer](https://stackoverflow.com/questions/22413009/jasmine-javascript-testing-tobe-vs-toequal)
+- [github gist for jasmine test using js strings](https://gist.github.com/rachelmyers/765544)
+- https://scriptverse.academy/tutorials/jasmine.html
+- https://blog.codeship.com/jasmine-spyon/
+- http://www.mattzeunert.com/2016/01/28/javascript-deep-equal.html
+- [This answer on SO](https://stackoverflow.com/a/2255893)
+- [Valid URL Regex](http://urlregex.com/)
+- http://evanhahn.com/how-do-i-jasmine/
