@@ -139,6 +139,25 @@ $(function() {
     /* TODO: Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection', function() {
 
+        // Setup initialization for test spec
+        beforeEach(function(done) {
+
+            // Grab the existing feed entries before removing them
+            // (i.e. Set initital state)
+            this.initialFeedEntries = document.querySelectorAll('.feed .entry');
+
+            // Reset the .feed container to have no child .entry elements
+            // so we can load a new feed entries without the old ones.
+            var feedEl = document.querySelector('.feed');
+            feedEl.innerHTML = '';
+
+            // Load new feed
+            loadFeed(3, function() {
+                done();
+            });
+        });
+
+
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
