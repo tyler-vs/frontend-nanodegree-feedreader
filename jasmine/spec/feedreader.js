@@ -195,12 +195,15 @@ $(function() {
          */
         it ('have new feed entries that are different from the existing/pre-loaded entries after loading a new feed', function(done) {
 
-            // Grab nodelist of entries after loading the new feed
-            var newFeedEntries = document.querySelectorAll('.feed .entry');
-
-            // Expect the newer nodelist to not be the same
-            // (ergo to have changed) from the old/initial entries
-            expect(newFeedEntries).not.toEqual(this.initialFeedEntries);
+            // Loop through the first and second feed and compare
+            // array elements that represent entries fro, each feed,
+            // feeds can be of varying length so using only one feeds
+            // length should suffice as a test pool
+            for (let i = 0, max = firstFeed.length; i < max; i++) {
+                // console.log(`ONE: ${firstFeed[i].href} and TWO: ${secondFeed[i].href}`);
+                // Check if they have different href values
+                expect(firstFeed[i].href).not.toEqual(secondFeed[i].href);
+            }
 
             // Finish our async spec test
             done();
