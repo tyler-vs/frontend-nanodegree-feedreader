@@ -199,7 +199,16 @@ $(function() {
             // array elements that represent entries fro, each feed,
             // feeds can be of varying length so using only one feeds
             // length should suffice as a test pool
-            for (let i = 0, max = firstFeed.length; i < max; i++) {
+            var firstFeedLen = firstFeed.length;
+            var secondFeedLen = secondFeed.length;
+            var shortestFeed = Math.min(firstFeedLen, secondFeedLen);
+
+            console.log(`the shortest feed contained: ${shortestFeed} entries.`);
+
+            // IDEA: ternary or using Math.min to find the min number
+            // between the wo feeds entries lengths.
+            // (firstFeedLen <= secondFeedLen) ? firstFeedLen : secondFeedLen;
+            for (let i = 0, max = shortestFeed; i < max; i++) {
                 // console.log(`ONE: ${firstFeed[i].href} and TWO: ${secondFeed[i].href}`);
                 // Check if they have different href values
                 expect(firstFeed[i].href).not.toEqual(secondFeed[i].href);
