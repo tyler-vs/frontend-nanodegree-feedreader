@@ -143,6 +143,9 @@ $(function() {
     /* TODO: Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection', function() {
 
+        var firstFeed;
+        var secondFeed;
+
         // Setup initialization for test spec
         beforeEach(function(done) {
 
