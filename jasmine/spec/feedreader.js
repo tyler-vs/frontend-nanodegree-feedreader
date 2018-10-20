@@ -162,5 +162,19 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+        it ('have new feed entries that are different from the existing/pre-loaded entries after loading a new feed', function(done) {
+
+            // Grab nodelist of entries after loading the new feed
+            var newFeedEntries = document.querySelectorAll('.feed .entry');
+
+            // Expect the newer nodelist to not be the same
+            // (ergo to have changed) from the old/initial entries
+            expect(newFeedEntries).not.toEqual(this.initialFeedEntries);
+
+            // Finish our async spec test
+            done();
+        });
+
+
     });
 }());
