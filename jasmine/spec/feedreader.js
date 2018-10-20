@@ -136,6 +136,10 @@ $(function() {
         });
     });
 
+    // IDEA: Nest the above test suite with this one because they
+    // have similar setup? This perhaps could ensure we abide by
+    // no suite being dependent on another test suite.
+
     /* TODO: Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection', function() {
 
