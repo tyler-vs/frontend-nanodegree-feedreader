@@ -158,8 +158,8 @@ $(function() {
 
                 firstFeed = document.querySelectorAll('.feed .entry-link');
                 firstFeed = [...firstFeed];
-                console.log('FOO');
-                console.log(firstFeed);
+                // console.log('FOO');
+                // console.log(firstFeed);
 
                 // done();
 
@@ -180,8 +180,8 @@ $(function() {
                     // when comparing dom attributes (i.e. node[i].id)
                     secondFeed = [...secondFeed];
 
-                    console.log('BAR');
-                    console.log(secondFeed);
+                    // console.log('BAR');
+                    // console.log(secondFeed);
 
                     done();
                 });
@@ -203,7 +203,7 @@ $(function() {
             var secondFeedLen = secondFeed.length;
             var shortestFeed = Math.min(firstFeedLen, secondFeedLen);
 
-            console.log(`the shortest feed contained: ${shortestFeed} entries.`);
+            // console.log(`the shortest feed contained: ${shortestFeed} entries.`);
 
             // IDEA: ternary or using Math.min to find the min number
             // between the wo feeds entries lengths.
