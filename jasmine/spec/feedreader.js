@@ -106,6 +106,17 @@ $(function() {
     /* TODO: Write a new test suite named "Initial Entries" */
     describe('Initial Entries', function() {
 
+        // Before each spec test
+        beforeEach(function(done) {
+
+            // Reset the .feed container to have no child .entry elements
+            var feedEl = document.querySelector('.feed');
+            feedEl.innerHTML = '';
+
+            loadFeed(1, function() {
+                done();
+            });
+        });
 
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
@@ -114,11 +125,21 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
 
+        it('should complete asynchronous work, that there is at least a single .entry in the .feed container', function(done) {
+
+            // Using a CSS-like selector, only .entry elements that are
+            // children/descendant of then .feed element will return
+            // a nodelist
+            expect(document.querySelectorAll('.feed .entry').length).toBeGreaterThan(1);
+
+            done();
+        });
+    });
+
     /* TODO: Write a new test suite named "New Feed Selection" */
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-    });
 }());
