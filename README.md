@@ -57,4 +57,6 @@ Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/pr
 - Clemens Helm
     + [Twitter](https://twitter.com/clemenshelm)
     + [Codeship Tutorial: Using Jasmine for JavaScript Testing](https://blog.codeship.com/jasmine-testing-javascript/)
-
+- <https://howtodoinjava.com/scripting/javascript/jasmine-unit-testing-tutorial/>
+- [Potential alternative than using simply using nodeList and jasmine's isEqual() when checking that the feed entries changed after selecting a new feed](https://stackoverflow.com/questions/18600109/comparing-a-nodelist-to-an-array-of-element-ids)
+- https://medium.com/dailyjs
