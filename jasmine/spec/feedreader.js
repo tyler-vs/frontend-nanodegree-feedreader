@@ -154,8 +154,37 @@ $(function() {
             document.querySelector('.feed').innerHTML = '';
 
             // Load new feed
-            loadFeed(3, function() {
-                done();
+            loadFeed(1, function() {
+
+                firstFeed = document.querySelectorAll('.feed .entry-link');
+                firstFeed = [...firstFeed];
+                console.log('FOO');
+                console.log(firstFeed);
+
+                // done();
+
+                // $('.feed').empty();
+                // NOTE: We do not have to remove any elements from the
+                // feed again because the loadFeed takes care of that.
+                // Just one
+
+
+                // Nesting our second feed load inside the first feed load
+                // this makes it more predicatable that this second load
+                // will occur before the first??
+                loadFeed(2, function() {
+
+                    // Save nodelist of second feed
+                    secondFeed = document.querySelectorAll('.feed .entry-link');
+                    // Turn the nodeList into an array for easier to work with
+                    // when comparing dom attributes (i.e. node[i].id)
+                    secondFeed = [...secondFeed];
+
+                    console.log('BAR');
+                    console.log(secondFeed);
+
+                    done();
+                });
             });
         });
 
