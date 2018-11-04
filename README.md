@@ -47,3 +47,4 @@ To view entries from a different feed, simply locate and click the menu icon (ap
 - [This answer on SO](https://stackoverflow.com/a/2255893)
 - [Valid URL Regex](http://urlregex.com/)
 - http://evanhahn.com/how-do-i-jasmine/
+- [Medium Article on Jasmine Testing by Benjamin Cunningham](https://medium.com/letsboot/testing-javascript-with-jasmine-basics-48efe03cf973)
