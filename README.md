@@ -48,3 +48,4 @@ To view entries from a different feed, simply locate and click the menu icon (ap
 - [Valid URL Regex](http://urlregex.com/)
 - http://evanhahn.com/how-do-i-jasmine/
 - [Medium Article on Jasmine Testing by Benjamin Cunningham](https://medium.com/letsboot/testing-javascript-with-jasmine-basics-48efe03cf973)
+- [Article on using Handlebars](https://blog.teamtreehouse.com/getting-started-with-handlebars-js)
